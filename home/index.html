@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <!-- Bootstrap icons only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <title>Document</title>
+
+<script>
+
+window.addEventListener("load", function(){
+
+    const delete_task_btn = document.querySelectorAll(".main__section__samples__action__deleteButton");
+    const hide_modal_btn = document.querySelector(".main__modal__message__container__action__cancelButton");
+    const main_modal = document.getElementById("main__modal");
+    main_modal.style.display = "none";
+
+    delete_task_btn.forEach((value) => {
+
+        value.addEventListener("click", function(){
+
+            if(main_modal.style.display == "none")
+                main_modal.style.display = "block";
+            else
+                main_modal.style.display = "none";
+
+        });
+    });
+
+    hide_modal_btn.addEventListener("click", function(){
+        main_modal.style.display = "none";
+    });
+
+});
+
+</script>    
+
+</head>
+<body>
+    
+<div class="main__modal" id="main__modal">
+
+    <div class="main__modal__message">
+
+        <div class="main__modal__message__container">
+
+            <span class="main__modal__message__container__title">Are you sure want to delete the task?</span>
+
+            <div class="main__modal__message__container__action">
+
+                <button class="main__modal__message__container__action__acceptButton">Yes, delete</button>
+
+                <button class="main__modal__message__container__action__cancelButton">No, cancel</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="main__section">
+    <div class="main__container">
+
+        <div class="main__section__welcome">
+
+            <div class="main__section__welcome__greeting">
+                <span>Good morning, <strong>John</strong></span>
+                <span>Today</span>
+                <span>22 July, 2022</span>
+            </div>
+
+            <div class="main__section__welcome__status">
+                <span>Completed 
+                <strong class="main__section_welcome__status_imcomplete">4</strong>/10</span>
+            </div>
+
+        </div>
+
+        <!-- sample -->
+        <div class="main__section__samples">
+
+            <div class="main__section__samples__status">
+                <input type="checkbox" />
+            </div>
+
+            <div class="main__section__samples__description">
+                <time>7:00 <br /> &nbsp;am</time>
+                <div>
+                    <p title="Eat a good breakfast. Lorem ipsum dolor sit amet consectetur adipisicing elit.">
+                        Eat a good breakfast. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span>Health</span>
+                </div>
+            </div>
+
+            <div class="main__section__samples__action">
+                <a href="#">
+                    <i class="bi bi-pencil"></i>
+                </a>
+                <button class="main__section__samples__action__deleteButton">
+                    <i class="bi bi-trash"></i>
+                </button>              
+            </div>
+        </div>
+
+        <div class="main__section__samples">
+
+            <div class="main__section__samples__status">
+                <input type="checkbox" />
+            </div>
+
+            <div class="main__section__samples__description">
+                <time>7:00 <br /> &nbsp;am</time>
+                <div>
+                    <p title="Eat a good breakfast. Lorem ipsum dolor sit amet consectetur adipisicing elit.">Eat a good breakfast. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span>Health</span>
+                </div>
+            </div>
+
+            <div class="main__section__samples__action">
+                <a href="#">
+                    <i class="bi bi-pencil"></i>
+                </a>
+                <button class="main__section__samples__action__deleteButton">
+                    <i class="bi bi-trash"></i>
+                </button>
+                
+            </div>
+        </div>
+
+        <div class="main__section__samples">
+
+            <div class="main__section__samples__status">
+                <input type="checkbox" checked />
+            </div>
+
+            <div class="main__section__samples__description">
+                <time>7:00 <br /> &nbsp;am</time>
+                <div>
+                    <p class="main__section__samples__description_completed" 
+                        title="Eat a good breakfast. Lorem ipsum dolor sit amet consectetur adipisicing elit.">
+                        Eat a good breakfast. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span>Health</span>
+                </div>
+            </div>
+
+            <div class="main__section__samples__action">
+                <a href="#">
+                    <i class="bi bi-pencil"></i>
+                </a>
+                <button class="main__section__samples__action__deleteButton">
+                    <i class="bi bi-trash"></i>
+                </button>
+                
+            </div>
+        </div>
+
+        <div class="main__section__completed__banner">
+            <figure class="main__section__completed__banner__image">
+                <i class="bi bi-emoji-wink-fill"></i>
+            </figure>
+            <span class="main__section__completed__banner__title">All done for today.</span>                
+            <span class="main__section__completed__banner__subtitle">You can take a break.</span>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+
+.main__section__notFound{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+
+    @media screen and (max-width: 500px) {
+        width: 90%;
+    }
+
+    .main__section__notFound__title{
+        width: fit-content;
+        margin: 0 auto;
+        margin-bottom: 40px;
+
+        font-weight: 600;
+        color: $first-color;
+        font-family: $font-bold;
+        font-size: map-get($gigant-icon-size, "desktop");
+
+        @media screen and (max-width: 900px) {
+            margin-bottom: 30px;
+            font-size: map-get($gigant-icon-size, "tablet");
+        }
+
+        @media screen and (max-width: 500px) {
+            margin-bottom: 20px;
+            font-size: map-get($gigant-icon-size, "phone");
+        }
+
+    }
+
+    .main__section__notFound__subtitle{
+        width: fit-content;
+        margin: 0 auto;
+
+        padding: 4px 0;
+        font-weight: 600;
+        color: $first-color;
+        font-family: $font-bold;
+        font-size: map-get($section-title-size-I, "desktop");
+
+        @media screen and (max-width: 900px) {
+            font-size: map-get($section-title-size-I, "tablet");
+        }
+
+        @media screen and (max-width: 500px) {
+            font-size: map-get($section-title-size-I, "phone");
+        }
+    }
+
+}
+
